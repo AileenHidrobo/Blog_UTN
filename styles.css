@@ -47,7 +47,7 @@
   --shadow-md: 0 8px 24px rgba(36, 33, 32, 0.08);
   --shadow-lg: 0 16px 36px rgba(36, 33, 32, 0.12);
   
-  --header-height: 4.25rem;
+  --header-height: 3.85rem;
   --transition-fast: 0.18s ease;
   --transition-normal: 0.28s ease;
 }
@@ -62,10 +62,10 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--header-height) + 1.5rem);
+  scroll-padding-top: calc(var(--header-height) + 1.25rem);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100%;
 }
 
@@ -78,9 +78,10 @@ body {
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100%;
   width: 100%;
+  padding-top: var(--header-height);
 }
 
 /* Utilidades generales */
@@ -117,9 +118,13 @@ a:hover {
   position: fixed;
   inset-block-start: 0;
   inset-inline: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   height: 4px;
   background: rgba(0, 0, 0, 0.2);
-  z-index: 1000;
+  z-index: 1001;
   pointer-events: none;
 }
 
@@ -132,16 +137,21 @@ a:hover {
 
 /* ==========================================================================
    CABECERA PRINCIPAL Y NAVEGACIÓN (SITE HEADER)
-   Barra superior en tono rojizo sobrio (#781D1E / #9E2A2B) con navegación centrada
+   Barra superior fija permanente (#781D1E / #9E2A2B) visible en todo el scroll
    ========================================================================== */
 .site-header {
-  position: sticky;
+  position: fixed;
   inset-block-start: 0;
-  min-height: 3.75rem;
+  inset-inline: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  min-height: var(--header-height);
   background: linear-gradient(135deg, #781D1E 0%, #9E2A2B 100%);
   border-bottom: 1px solid #5A1213;
   box-shadow: 0 4px 18px rgba(120, 29, 30, 0.28);
-  z-index: 900;
+  z-index: 999;
   display: flex;
   align-items: center;
 }
