@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entre privilegios y promesas: ¿qué ofrece a Imbabura? | Reportaje de Análisis Político</title>
+  <meta name="description" content="Reportaje y análisis académico sobre la propuesta política, social y económica del binomio Paolina Vercoutère Quinche y Michael Encalada a la Prefectura de Imbabura.">
+  <meta name="author" content="Unidad de Investigación y Análisis Político Territorial">
+  
+  <!-- Tipografías de Google Fonts: Lora (Serif editorial) y Plus Jakarta Sans (Sans-serif moderna) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+
+  <!-- Barra de progreso de lectura (scroll progress) -->
+  <div class="scroll-progress-container" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+  </div>
+
+  <!-- Cabecera principal y navegación accesible -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner container">
+      <!-- Barra de navegación con popover nativo moderno según directrices de accesibilidad -->
+      <nav class="site-nav" aria-label="Navegación principal del reportaje">
+        <button
+          class="menu-button"
+          type="button"
+          popovertarget="site-menu"
+          popovertargetaction="toggle"
+          aria-controls="site-menu"
+          aria-expanded="false"
+          id="menuToggleBtn"
+        >
+          <span class="menu-icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="menu-label">Menú</span>
+        </button>
+
+        <ul id="site-menu" class="site-menu" popover="auto">
+          <li><a href="#introduccion" class="nav-link">Contexto</a></li>
+          <li><a href="#antecedentes" class="nav-link">Trayectoria</a></li>
+          <li><a href="#eje-politico" class="nav-link">Eje Político</a></li>
+          <li><a href="#eje-social" class="nav-link">Eje Social</a></li>
+          <li><a href="#eje-economico" class="nav-link">Eje Económico</a></li>
+          <li><a href="#matriz-impactos" class="nav-link">Viabilidad</a></li>
+          <li><a href="#multimedia" class="nav-link">Videos</a></li>
+          <li><a href="#galeria" class="nav-link">Galería</a></li>
+          <li><a href="#conclusiones" class="nav-link">Conclusiones</a></li>
+          <li><a href="#referencias" class="nav-link">Referencias</a></li>
+        </ul>
+      </nav>
+
+      <!-- Acción de imprimir/guardar reportaje -->
+      <div class="header-actions">
+        <button type="button" id="printBtn" class="action-btn print-btn" title="Imprimir o guardar como PDF" aria-label="Imprimir reportaje">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content" id="contenido-principal">
+    
+    <!-- Hero Article Header -->
+    <article class="reportage-container container">
+      
+      <header class="article-hero">
+        <div class="article-category-badge">
+          <span class="category-icon" aria-hidden="true">🏛️</span>
+          <span>Análisis Electoral Provincial • Imbabura 2026</span>
+        </div>
+
+        <h1 class="article-headline">
+          Entre privilegios y promesas: ¿qué ofrece a Imbabura?
+        </h1>
+
+        <p class="article-deck">
+          Radiografía crítica a la propuesta política, social y económica del binomio Paolina Vercoutère Quinche y Michael Encalada (<em>Juntos por la Transformación</em>): las tensiones entre la retórica de ruptura intercultural, la experiencia de cogobierno provincial y la viabilidad fiscal en el Geoparque Mundial de la UNESCO.
+        </p>
+
+        <!-- Ficha técnica y metadatos periodísticos -->
+        <div class="article-meta-box">
+          <div class="meta-item">
+            <span class="meta-label">Investigación & Redacción:</span>
+            <span class="meta-value">Mesa de Periodismo Digital & Análisis Territorial</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Fecha de Edición:</span>
+            <time class="meta-value" datetime="2026-11-23">23 de noviembre de 2026</time>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Extensión del Reportaje:</span>
+            <span class="meta-value" id="wordCountBadge">~1.250 palabras</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Tiempo de Lectura:</span>
+            <span class="meta-value" id="readingTimeBadge">6 min de lectura</span>
+          </div>
+        </div>
+
+        <!-- Imagen de Apertura / Retrato editorial -->
+        <figure class="hero-figure">
+          <div class="image-wrapper hero-image-wrapper">
+            <img 
+              src="FOTOS/1.jpeg" 
+              alt="Retrato de Paolina Vercoutère Quinche, lideresa kichwa y candidata a la Prefectura de Imbabura" 
+              class="responsive-img hero-img"
+              loading="eager"
+              width="800"
+              height="1200"
+            >
+            <div class="image-overlay-tag">Figura 1 • Candidatura Oficial</div>
+          </div>
+          <figcaption class="editorial-caption">
+            <strong>Figura 1.</strong> Paolina Vercoutère Quinche, académica, referente del feminismo comunitario indígena kichwa y exviceprefecta de Imbabura, encabeza la papeleta provincial junto a Michael Encalada. 
+            <span class="caption-credit">Fuente: Archivo fotográfico oficial de la campaña / Alianza <em>Juntos por la Transformación</em> (2026).</span>
+          </figcaption>
+        </figure>
+      </header>
+
+      <!-- Disposición principal con artículo y barra lateral de navegación y datos -->
+      <div class="article-layout">
+        
+        <!-- Barra lateral izquierda / sumario e indicadores -->
+        <aside class="article-sidebar" aria-label="Navegación del contenido e indicadores clave">
+          <div class="sticky-sidebar-content">
+            
+            <nav class="table-of-contents" aria-label="Índice de secciones del reportaje">
+              <h2 class="toc-title">Estructura del Reportaje</h2>
+              <ol class="toc-list">
+                <li><a href="#introduccion">1. Contexto Territorial</a></li>
+                <li><a href="#antecedentes">2. Antecedentes y Trayectoria</a></li>
+                <li><a href="#eje-politico">3. Eje Político y Gobernanza</a></li>
+                <li><a href="#eje-social">4. Eje Social y Derechos</a></li>
+                <li><a href="#eje-economico">5. Eje Económico y Productivo</a></li>
+                <li><a href="#matriz-impactos">6. Matriz de Viabilidad e Impactos</a></li>
+                <li><a href="#multimedia">7. Registro Audiovisual</a></li>
+                <li><a href="#galeria">8. Fotogalería de Campo</a></li>
+                <li><a href="#conclusiones">9. Conclusiones y Balance</a></li>
+                <li><a href="#referencias">10. Referencias Bibliográficas (APA)</a></li>
+              </ol>
+            </nav>
+
+            <!-- Ficha de indicadores territoriales provinciales -->
+            <div class="kpi-card" aria-label="Indicadores territoriales de Imbabura">
+              <h3 class="kpi-card-title">Imbabura en Cifras</h3>
+              <ul class="kpi-list">
+                <li>
+                  <span class="kpi-number">476.257</span>
+                  <span class="kpi-desc">Habitantes en la provincia (INEC, censo proyectado).</span>
+                </li>
+                <li>
+                  <span class="kpi-number">55,4%</span>
+                  <span class="kpi-desc">Pobreza rural por Necesidades Básicas Insatisfechas (NBI).</span>
+                </li>
+                <li>
+                  <span class="kpi-number">6 / 36</span>
+                  <span class="kpi-desc">Cantones y juntas parroquiales rurales a articular.</span>
+                </li>
+                <li>
+                  <span class="kpi-number">2.840 km</span>
+                  <span class="kpi-desc">Red vial provincial (más del 65% es red terciaria/lastrada).</span>
+                </li>
+                <li>
+                  <span class="kpi-number">1.er Geoparque</span>
+                  <span class="kpi-desc">Mundial de la UNESCO en Ecuador (declarado en 2019).</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </aside>
+
+        <!-- Cuerpo del Reportaje Periodístico -->
+        <div class="article-body-content" id="reportageBody">
+          
+          <!-- SECCIÓN 1: INTRODUCCIÓN -->
+          <section id="introduccion" class="reportage-section">
+            <div class="section-tag">Sección 1 • Contexto Territorial y Político</div>
+            <h2 class="section-heading">1. Introducción: La encrucijada imbabureña entre contrastes y votos</h2>
+            
+            <p class="paragraph lead-paragraph">
+              En el tablero político del norte ecuatoriano, la provincia de Imbabura se encuentra ante una de sus encrucijadas electorales más complejas y determinantes. Distinguida en 2019 como el primer Geoparque Mundial de la UNESCO en el Ecuador, este territorio de 4.599 kilómetros cuadrados sintetiza agudos contrastes socioeconómicos: una pujante actividad turística, textil y artesanal, frente a una persistente brecha de pobreza rural por Necesidades Básicas Insatisfechas (NBI) que en parroquias de Otavalo, Cotacachi y Pimampiro supera el 55% (INEC, 2023). En este escenario de disputas por el modelo de desarrollo provincial, emerge la candidatura a la Prefectura de <strong>Paolina Vercoutère Quinche</strong>, quien junto a <strong>Michael Encalada</strong> como postulante a la viceprefectura, encabeza la alianza política <strong><em>Juntos por la Transformación</em></strong>.
+            </p>
+
+            <p class="paragraph">
+              Analizar esta propuesta desde el periodismo de investigación universitario reviste un interés singular. La candidatura articula una narrativa de ruptura frente a los privilegios tradicionales, postulando un modelo plurinacional y feminista. Sin embargo, la candidata no proviene de la periferia: fue la viceprefecta electa de la provincia, habiendo compartido el sillón ejecutivo del Gobierno Provincial de Imbabura hasta su dimisión formal. Este reportaje examina la viabilidad, contradicciones y alcance de su plan de gobierno en sus tres ejes centrales: <strong>Político</strong>, <strong>Social</strong> y <strong>Económico</strong>, frente a la estrecha realidad presupuestaria provincial.
+            </p>
+
+            <blockquote class="editorial-pullquote">
+              <p>«La provincia no puede seguir administrándose bajo la lógica de la dádiva o el monopolio de la obra pública; el reto es democratizar el poder desde la plurinacionalidad y la justicia territorial.»</p>
+              <cite>— Paolina Vercoutère Quinche, asamblea programática provincial (2026).</cite>
+            </blockquote>
+          </section>
+
+          <!-- SECCIÓN 2: ANTECEDENTES Y TRAYECTORIA -->
+          <section id="antecedentes" class="reportage-section">
+            <div class="section-tag">Sección 2 • Trayectoria Institucional</div>
+            <h2 class="section-heading">2. Antecedentes y trayectoria: El salto de la viceprefectura al liderazgo de ruptura</h2>
+
+            <p class="paragraph">
+              La trayectoria de Paolina Vercoutère Quinche se forja en el cruce entre la academia de posgrado, el activismo social y la gestión pública. Nacida en Otavalo, de madre kichwa y padre francés, consolidó su liderazgo en la defensa de los derechos colectivos, la plurinacionalidad y los estudios de género con enfoque interseccional. Su carrera registra hitos inéditos en la sierra norte: fue la <strong>primera mujer indígena kichwa en ejercer como Gobernadora de Imbabura</strong>, un cargo históricamente ocupado por élites tradicionales de Ibarra.
+            </p>
+
+            <!-- Imagen 2: Trayectoria e hitos -->
+            <figure class="article-figure">
+              <div class="image-wrapper">
+                <img 
+                  src="FOTOS/2.jpeg" 
+                  alt="Paolina Vercoutère en acto ciudadano y encuentro popular en la provincia de Imbabura" 
+                  class="responsive-img"
+                  loading="lazy"
+                  width="1600"
+                  height="1066"
+                >
+                <div class="image-overlay-tag">Figura 2 • Trayectoria y Gestión</div>
+              </div>
+              <figcaption class="editorial-caption">
+                <strong>Figura 2.</strong> Vercoutère durante un encuentro de participación ciudadana en territorio imbabureño. Su paso por la gestión pública articula presencia comunitaria con políticas de derechos colectivos.
+                <span class="caption-credit">Fuente: Registro oficial de actividades territoriales (2025-2026).</span>
+              </figcaption>
+            </figure>
+
+            <p class="paragraph">
+              Posteriormente, en las elecciones seccionales de 2023, fue electa <strong>Viceprefecta de Imbabura en binomio con Richard Calderón</strong>. Desde esa función impulsó convenios internacionales sobre ciudades seguras para mujeres y niñas, foros globales de derechos humanos y proyectos de asistencia social. No obstante, en <strong>agosto de 2026, Vercoutère formalizó su renuncia irrevocable al cargo</strong>, marcando un desmarque político con la administración en funciones para liderar la candidatura a la Prefectura junto a Michael Encalada bajo el movimiento <em>Juntos por la Transformación</em>. Este quiebre la sitúa en una posición exigente: capitaliza el dominio técnico del GAD Provincial, pero debe responder ante el electorado por los pasivos y demandas no resueltas durante los más de tres años en que compartió el mando seccional.
+            </p>
+          </section>
+
+          <!-- SECCIÓN 3: EJE POLÍTICO -->
+          <section id="eje-politico" class="reportage-section">
+            <div class="section-tag">Sección 3 • Eje Programático 1</div>
+            <h2 class="section-heading">3. Eje Político: Gobernanza plurinacional, descentralización y gobernabilidad</h2>
+
+            <p class="paragraph">
+              El eje político plantea una <em>Gobernanza Plurinacional y Descentralizada</em>, cuyo objetivo es transformar la toma de decisiones en los seis cantones y 36 juntas parroquiales rurales de Imbabura. Frente al centralismo burocrático, el binomio Vercoutère-Encalada prioriza tres líneas de acción fundamentales:
+            </p>
+
+            <!-- Imagen 3: Eje Político y Movilización -->
+            <figure class="article-figure">
+              <div class="image-wrapper">
+                <img 
+                  src="FOTOS/3.jpeg" 
+                  alt="Militancia y encuentro del binomio con Michael Encalada bajo el movimiento Juntos por la Transformación" 
+                  class="responsive-img"
+                  loading="lazy"
+                  width="1600"
+                  height="1006"
+                >
+                <div class="image-overlay-tag">Figura 3 • Binomio y Gobernanza</div>
+              </div>
+              <figcaption class="editorial-caption">
+                <strong>Figura 3.</strong> El binomio conformado por Paolina Vercoutère y Michael Encalada articula alianzas con sectores populares urbanos, juntas parroquiales y cabildos comunitarios bajo la bandera de <em>Juntos por la Transformación</em>.
+                <span class="caption-credit">Fuente: Registro fotográfico de asamblea programática / Cobertura electoral (2026).</span>
+              </figcaption>
+            </figure>
+
+            <div class="feature-grid">
+              <div class="feature-card">
+                <div class="feature-icon" aria-hidden="true">🤝</div>
+                <h3 class="feature-title">Presupuesto Participativo Vinculante</h3>
+                <p class="feature-desc">
+                  Reorientar partidas para que comunidades kichwas, afroecuatorianas y campesinas decidan directamente las obras prioritarias sin intermediarios clientelares.
+                </p>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-icon" aria-hidden="true">🏛️</div>
+                <h3 class="feature-title">Consejo Intercultural Permanente</h3>
+                <p class="feature-desc">
+                  Institucionalizar mesas de fiscalización ciudadana con organizaciones de base (FICI, UNORCAC) para vigilar las compras públicas y el mantenimiento vial.
+                </p>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-icon" aria-hidden="true">⚖️</div>
+                <h3 class="feature-title">Transparencia y Cero Prebendas</h3>
+                <p class="feature-desc">
+                  Veedurías universitarias independientes en la asignación de contratos públicos y fiscalización rigurosa del parque de maquinaria pesada.
+                </p>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-icon" aria-hidden="true">🗺️</div>
+                <h3 class="feature-title">Descentralización y Juntas Parroquiales</h3>
+                <p class="feature-desc">
+                  Convenios de concurrencia directa con las 36 juntas parroquiales rurales de Imbabura para transferir maquinaria, recursos y obras sin exclusión territorial.
+                </p>
+              </div>
+            </div>
+
+            <p class="paragraph">
+              Sin embargo, el análisis de gobernabilidad evidencia un desafío mayúsculo: el Consejo Provincial reúne a los alcaldes cantonales y delegados parroquiales. Investigadores de FLACSO (2021) advierten que una retórica de confrontación con las élites urbanas puede derivar en bloqueos legislativos en la cámara provincial si no se construye una sólida diplomacia de consensos pragmáticos con los cabildos municipales.
+            </p>
+          </section>
+
+          <!-- SECCIÓN 4: EJE SOCIAL -->
+          <section id="eje-social" class="reportage-section">
+            <div class="section-tag">Sección 4 • Eje Programático 2</div>
+            <h2 class="section-heading">4. Eje Social: Equidad de género, protección a la niñez y tejido comunitario</h2>
+
+            <p class="paragraph">
+              El eje social constituye el corazón de la propuesta, respaldado por la trayectoria de Vercoutère en foros de ONU Mujeres sobre erradicación de violencia de género. En una provincia donde 7 de cada 10 mujeres han sufrido algún tipo de violencia (INEC, 2023), el programa proyecta una <strong>Red Provincial de Refugios y Casas de Acogida</strong> con financiamiento permanente del patronato, articulando la justicia ordinaria con la justicia comunitaria de los cabildos indígenas para erradicar la impunidad en delitos contra niñas y mujeres.
+            </p>
+
+            <!-- Imagen 4: Eje Social -->
+            <figure class="article-figure">
+              <div class="image-wrapper">
+                <img 
+                  src="FOTOS/4.jpeg" 
+                  alt="Actividades de vinculación social, derechos comunitarios y atención a familias en la provincia" 
+                  class="responsive-img"
+                  loading="lazy"
+                  width="678"
+                  height="452"
+                >
+                <div class="image-overlay-tag">Figura 4 • Eje Social y Niñez</div>
+              </div>
+              <figcaption class="editorial-caption">
+                <strong>Figura 4.</strong> La atención integral a la infancia huérfana, la prevención de la violencia de género y las becas universitarias constituyen el eje social del plan de gobierno.
+                <span class="caption-credit">Fuente: Archivo institucional de gestión comunitaria (2025-2026).</span>
+              </figcaption>
+            </figure>
+
+            <div class="policy-block">
+              <h3 class="policy-title">A. Asistencia en orfandad: <em>«Wakcha sakirishkamanta kullki yanapay»</em></h3>
+              <p class="paragraph">
+                En protección a la niñez y adolescencia en extrema vulnerabilidad, la iniciativa bandera es la continuidad y universalización de <em>«wakcha sakirishkamanta kullki yanapay»</em> (soporte económico y seguimiento psicosocial a niños y adolescentes huérfanos por femicidio o indigencia), una política orientada a frenar el abandono escolar temprano en la ruralidad.
+              </p>
+
+              <h3 class="policy-title">B. Fondo Provincial de Becas Universitarias</h3>
+              <p class="paragraph">
+                En educación superior, plantea la creación de <strong>1.500 becas y medias becas anuales</strong> para que bachilleres de pueblos y nacionalidades cursen carreras técnicas y de tercer nivel en la Universidad Técnica del Norte e institutos afines, mitigando la exclusión educativa.
+              </p>
+
+              <h3 class="policy-title">C. Deporte Comunitario contra la Violencia</h3>
+              <p class="paragraph">
+                Asimismo, promueve el deporte comunitario (fútbol, ecuavóley, atletismo) como herramienta de integración barrial y escudo preventivo frente a la captación de bandas delictivas y el consumo problemático de sustancias en sectores periurbanos deprimidos.
+              </p>
+            </div>
+          </section>
+
+          <!-- SECCIÓN 5: EJE ECONÓMICO -->
+          <section id="eje-economico" class="reportage-section">
+            <div class="section-tag">Sección 5 • Eje Programático 3</div>
+            <h2 class="section-heading">5. Eje Económico: Agroecología, vialidad para el comercio y el Geoparque UNESCO</h2>
+
+            <p class="paragraph">
+              En materia económica, la candidatura aborda la reactivación productiva de Imbabura mediante cuatro ejes de intervención territorial y sostenible:
+            </p>
+
+            <!-- Imagen 5: Eje Económico -->
+            <figure class="article-figure">
+              <div class="image-wrapper">
+                <img 
+                  src="FOTOS/5.jpeg" 
+                  alt="Productores locales, ferias campesinas y emprendimientos comunitarios en Imbabura" 
+                  class="responsive-img"
+                  loading="lazy"
+                  width="678"
+                  height="452"
+                >
+                <div class="image-overlay-tag">Figura 5 • Economía Social y Productiva</div>
+              </div>
+              <figcaption class="editorial-caption">
+                <strong>Figura 5.</strong> Las ferias agroecológicas directas «del productor al consumidor» y el empoderamiento financiero de las mujeres rurales representan los ejes de dinamización productiva local.
+                <span class="caption-credit">Fuente: Registro fotográfico de ferias de economía popular y solidaria (2026).</span>
+              </figcaption>
+            </figure>
+
+            <div class="feature-grid">
+              <div class="feature-card">
+                <div class="feature-icon" aria-hidden="true">🌱</div>
+                <h3 class="feature-title">Fomento Agropecuario & Bioinsumos</h3>
+                <p class="feature-desc">
+                  Distribución de bioinsumos y abonos orgánicos a precio de costo, subsidio al análisis de suelos y tecnificación del riego parcelario por goteo en valles de Pimampiro y Chota.
+                </p>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-icon" aria-hidden="true">🗺️</div>
+                <h3 class="feature-title">Geoparque Mundial UNESCO</h3>
+                <p class="feature-desc">
+                  Potenciación del turismo comunitario y vivencial gestionado por comunas en Cuicocha, San Pablo y la cuenca de Intag, blindando las fuentes de agua frente a la minería metálica a gran escala.
+                </p>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-icon" aria-hidden="true">🚜</div>
+                <h3 class="feature-title">Vialidad Rural para la Cosecha</h3>
+                <p class="feature-desc">
+                  Asfaltado y mantenimiento prioritario de los «caminos de la cosecha», conectando centros de producción agrícola con mercados mayoristas de Ibarra y Quito para abaratar fletes a pequeños campesinos.
+                </p>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-icon" aria-hidden="true">👩🏽‍🌾</div>
+                <h3 class="feature-title">Autonomía Financiera Femenina</h3>
+                <p class="feature-desc">
+                  Fondos de crédito asociativo «Warmi Imbabura» sin garantías patrimoniales excluyentes para artesanas y productoras agroecológicas, siguiendo directrices de la CEPAL (2022).
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- SECCIÓN 6: ANÁLISIS ECONÓMICO Y MATRIZ DE IMPACTOS -->
+          <section id="matriz-impactos" class="reportage-section">
+            <div class="section-tag">Sección 6 • Análisis Riguroso de Viabilidad</div>
+            <h2 class="section-heading">6. Análisis económico, fuentes e impactos: ¿Cuánto cuesta la promesa?</h2>
+
+            <p class="paragraph">
+              El análisis riguroso de viabilidad económica confronta las promesas electorales con la estrechez fiscal. El GAD Provincial de Imbabura maneja un presupuesto anual de entre <strong>$45 y $55 millones de dólares</strong>, dependiente en más del 80% de transferencias del Modelo de Equidad Territorial del Ministerio de Economía y Finanzas (MEF). Con cerca del 60% del gasto comprometido en mantenimiento de más de 2.800 kilómetros de vías y costos operativos, el margen para financiar transferencias monetarias y becas es sumamente estrecho. Economistas de la UASB advierten que financiar estos programas requerirá captar fondos no reembolsables de la cooperación internacional, aprovechando el sello del Geoparque UNESCO.
+            </p>
+
+            <blockquote class="expert-quote">
+              <p>«El programa combina justicia social con innovación comunitaria, pero enfrenta una severa restricción de caja. Para evitar el desfinanciamiento de obras viales básicas, la administración provincial deberá apalancar con urgencia fondos verdes multilaterales (BID, CAF, Unión Europea).»</p>
+              <cite>— Econ. David Santillán, especialista en Finanzas Públicas y Desarrollo Regional (UASB).</cite>
+            </blockquote>
+
+            <!-- Matriz comparativa de impactos y desafíos -->
+            <div class="table-responsive-wrapper">
+              <table class="impact-table" aria-label="Matriz comparativa de impactos positivos y retos de viabilidad">
+                <caption>Tabla 1. Matriz de análisis de impactos, actores y retos de viabilidad por eje programático.</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Eje Estratégico</th>
+                    <th scope="col">Impactos Positivos Proyectados</th>
+                    <th scope="col">Riesgos y Retos de Viabilidad</th>
+                    <th scope="col">Actores Involucrados</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Eje Político (Gobernanza Plurinacional)</th>
+                    <td>
+                      Inclusión de comunas en la toma de decisiones presupuestarias; descentralización hacia las 36 juntas parroquiales.
+                    </td>
+                    <td>
+                      Riesgo de bloqueo legislativo en el Consejo Provincial con alcaldes de oposición urbana.
+                    </td>
+                    <td>Comunidades kichwas y afroecuatorianas, Juntas Parroquiales, Alcaldías cantonales.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Eje Social (Equidad y Protección)</th>
+                    <td>
+                      Protección efectiva a niños huérfanos (<em>«wakcha sakirishkamanta»</em>) y reducción de violencia de género.
+                    </td>
+                    <td>
+                      Alta dependencia de transferencias del MEF; riesgo de suspensión de ayudas si se retrasan las asignaciones estatales.
+                    </td>
+                    <td>Mujeres campesinas, niñas y adolescentes, Universidad Técnica del Norte, Patronato.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Eje Económico (Producción y Vialidad)</th>
+                    <td>
+                      Reducción de costos de transporte agropecuario y puesta en valor del Geoparque Mundial UNESCO sin depredación.
+                    </td>
+                    <td>
+                      Alto costo del kilómetro de asfaltado rural ($120.000-$180.000); tensiones socioambientales por minería en Intag.
+                    </td>
+                    <td>Agricultores familiares, transportistas, sector artesanal y turístico, cámaras de producción.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- SECCIÓN 7: REGISTRO AUDIOVISUAL -->
+          <section id="multimedia" class="reportage-section">
+            <div class="section-tag">Sección 7 • Registro Audiovisual</div>
+            <h2 class="section-heading">7. Registro audiovisual: El discurso de campaña y la narrativa territorial</h2>
+            
+            <p class="paragraph">
+              Para contrastar el discurso programático con la interacción directa en territorio y la estrategia comunicacional digital del binomio, documentamos tres piezas audiovisuales fundamentales difundidas en canales oficiales y medios provinciales. Cada reproductor ha sido configurado con su enlace canónico verificado y cuenta con botón de acceso directo a Facebook:
+            </p>
+
+            <!-- Cuadro de ayuda y aviso técnico sobre reproducción de Facebook -->
+            <div class="video-notice-box" role="note">
+              <span class="notice-icon" aria-hidden="true">💡</span>
+              <div class="notice-text">
+                <strong>Aviso sobre reproductores de Facebook:</strong> Los videos se cargan directamente desde los servidores de Meta. Si tu navegador bloquea cookies de terceros, utilizas modo incógnito o tienes extensiones de privacidad activas, el reproductor puede restringir la previsualización interna; en ese caso, utiliza el botón azul <strong>«Ver directamente en Facebook»</strong> para reproducirlo sin restricciones.
+              </div>
+            </div>
+
+            <div class="video-grid">
+              
+              <!-- Video 1: Formato Horizontal / Encuentro Comunitario -->
+              <article class="video-card video-card-landscape">
+                <header class="video-card-header">
+                  <div class="video-header-top">
+                    <span class="video-badge">Discurso Programático</span>
+                    <span class="video-source-pill">Fuente: Anteno TV</span>
+                  </div>
+                  <h3 class="video-title">1. Encuentro ciudadano: Discurso central sobre plurinacionalidad y transformación</h3>
+                </header>
+                
+                <div class="video-embed-container ratio-16-9">
+                  <iframe 
+                    src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fwatch%2F%3Fv%3D2163079590967633&show_text=false&width=560" 
+                    title="Video 1: Intervención de Paolina Vercoutère en asamblea provincial (Anteno TV)" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen
+                    loading="lazy">
+                  </iframe>
+                </div>
+
+                <div class="video-card-body">
+                  <p class="video-description">
+                    <strong>Contexto periodístico:</strong> Entrevista e intervención de la candidata ante dirigentes de los seis cantones, donde expone los motivos de su renuncia a la viceprefectura y fundamenta su alianza con Michael Encalada bajo el movimiento <em>Juntos por la Transformación</em>.
+                  </p>
+                  <div class="video-actions">
+                    <a href="https://www.facebook.com/watch/?v=2163079590967633" target="_blank" rel="noopener noreferrer" class="btn-facebook-backup">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                      Ver Video 1 directamente en Facebook
+                    </a>
+                    <a href="https://www.facebook.com/share/v/1CWC1ojFWt/" target="_blank" rel="noopener noreferrer" class="video-alt-link">
+                      Enlace alternativo de campaña (/share/v/1CWC1ojFWt/) →
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Video 2: Reel Vertical / Enfoque Social y Recorrido -->
+              <article class="video-card video-card-reel">
+                <header class="video-card-header">
+                  <div class="video-header-top">
+                    <span class="video-badge">Reel de Territorio</span>
+                    <span class="video-source-pill">Campaña Oficial</span>
+                  </div>
+                  <h3 class="video-title">2. Reel territorial: Derechos colectivos y cercanía con la ruralidad</h3>
+                </header>
+                
+                <div class="video-embed-container ratio-reel">
+                  <iframe 
+                    src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fwatch%2F%3Fv%3D1660340812256934&show_text=false&width=560" 
+                    title="Reel 2: Recorrido y mensaje en territorio de Paolina Vercoutère" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen
+                    loading="lazy">
+                  </iframe>
+                </div>
+
+                <div class="video-card-body">
+                  <p class="video-description">
+                    <strong>Contexto periodístico:</strong> Pieza audiovisual orientada a audiencias digitales, destacando la presencia en ferias rurales y el diálogo intergeneracional con adultos mayores y mujeres de las comunidades imbabureñas.
+                  </p>
+                  <div class="video-actions">
+                    <a href="https://www.facebook.com/watch/?v=1660340812256934" target="_blank" rel="noopener noreferrer" class="btn-facebook-backup">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                      Ver Reel 2 directamente en Facebook
+                    </a>
+                    <a href="https://www.facebook.com/share/r/1EEB7G6fs8/" target="_blank" rel="noopener noreferrer" class="video-alt-link">
+                      Enlace alternativo de campaña (/share/r/1EEB7G6fs8/) →
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Video 3: Reel Vertical / Propuestas Temáticas -->
+              <article class="video-card video-card-reel">
+                <header class="video-card-header">
+                  <div class="video-header-top">
+                    <span class="video-badge">Reel Programático</span>
+                    <span class="video-source-pill">Diario El Norte</span>
+                  </div>
+                  <h3 class="video-title">3. Reel de propuesta: Juventud, becas universitarias y futuro provincial</h3>
+                </header>
+                
+                <div class="video-embed-container ratio-reel">
+                  <iframe 
+                    src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fwatch%2F%3Fv%3D1605934404170192&show_text=false&width=560" 
+                    title="Reel 3: Propuestas de becas juveniles y desarrollo provincial (Diario El Norte)" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen
+                    loading="lazy">
+                  </iframe>
+                </div>
+
+                <div class="video-card-body">
+                  <p class="video-description">
+                    <strong>Contexto periodístico:</strong> Cobertura periodística de Diario El Norte abordando las propuestas dirigidas al electorado estudiantil: becas de educación superior, conectividad rural y deporte parroquial.
+                  </p>
+                  <div class="video-actions">
+                    <a href="https://www.facebook.com/watch/?v=1605934404170192" target="_blank" rel="noopener noreferrer" class="btn-facebook-backup">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                      Ver Reel 3 directamente en Facebook
+                    </a>
+                    <a href="https://www.facebook.com/share/r/1Dzg9keN2b/" target="_blank" rel="noopener noreferrer" class="video-alt-link">
+                      Enlace alternativo de campaña (/share/r/1Dzg9keN2b/) →
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </section>
+
+          <!-- SECCIÓN 8: GALERÍA DE IMÁGENES -->
+          <section id="galeria" class="reportage-section">
+            <div class="section-tag">Sección 8 • Registro Fotográfico</div>
+            <h2 class="section-heading">8. Fotogalería testimonial: Las imágenes del reportaje</h2>
+            <p class="paragraph">
+              Haga clic en cualquiera de las fotografías para desplegar el visor interactivo de alta resolución con sus créditos y ficha técnica de procedencia:
+            </p>
+
+            <div class="gallery-grid">
+              <button type="button" class="gallery-item-card" data-img-src="FOTOS/1.jpeg" data-caption="Figura 1: Paolina Vercoutère Quinche en retrato oficial de candidatura. Lideresa kichwa y exviceprefecta de Imbabura (2026)." aria-label="Ampliar imagen 1">
+                <img src="FOTOS/1.jpeg" alt="Paolina Vercoutère Quinche" loading="lazy" class="gallery-thumb" width="800" height="1200">
+                <span class="gallery-zoom-label">🔍 Ampliar foto 1</span>
+              </button>
+
+              <button type="button" class="gallery-item-card" data-img-src="FOTOS/2.jpeg" data-caption="Figura 2: Jornada ciudadana y balance de gestión institucional en parroquias rurales de Imbabura." aria-label="Ampliar imagen 2">
+                <img src="FOTOS/2.jpeg" alt="Acto ciudadano en Imbabura" loading="lazy" class="gallery-thumb" width="1600" height="1066">
+                <span class="gallery-zoom-label">🔍 Ampliar foto 2</span>
+              </button>
+
+              <button type="button" class="gallery-item-card" data-img-src="FOTOS/3.jpeg" data-caption="Figura 3: Encuentro de la alianza Juntos por la Transformación con Michael Encalada y organizaciones de base." aria-label="Ampliar imagen 3">
+                <img src="FOTOS/3.jpeg" alt="Binomio con Michael Encalada" loading="lazy" class="gallery-thumb" width="1600" height="1006">
+                <span class="gallery-zoom-label">🔍 Ampliar foto 3</span>
+              </button>
+
+              <button type="button" class="gallery-item-card" data-img-src="FOTOS/4.jpeg" data-caption="Figura 4: Eje social y derechos comunitarios con énfasis en niñez, orfandad y erradicación de violencia machista." aria-label="Ampliar imagen 4">
+                <img src="FOTOS/4.jpeg" alt="Programas de inclusión social y niñez" loading="lazy" class="gallery-thumb" width="678" height="452">
+                <span class="gallery-zoom-label">🔍 Ampliar foto 4</span>
+              </button>
+
+              <button type="button" class="gallery-item-card" data-img-src="FOTOS/5.jpeg" data-caption="Figura 5: Fomento productivo, ferias agroecológicas directas y autonomía económica de mujeres productoras." aria-label="Ampliar imagen 5">
+                <img src="FOTOS/5.jpeg" alt="Ferias productivas y economía solidaria" loading="lazy" class="gallery-thumb" width="678" height="452">
+                <span class="gallery-zoom-label">🔍 Ampliar foto 5</span>
+              </button>
+            </div>
+          </section>
+
+          <!-- SECCIÓN 9: CONCLUSIONES -->
+          <section id="conclusiones" class="reportage-section">
+            <div class="section-tag">Sección 9 • Balance Periodístico</div>
+            <h2 class="section-heading">9. Conclusiones: La tensión irreductible entre narrativa y gestión</h2>
+
+            <p class="paragraph">
+              La candidatura de Paolina Vercoutère Quinche y Michael Encalada condensa una de las propuestas más articuladas en plurinacionalidad, equidad de género y derechos colectivos en la historia electoral de Imbabura. Su plan conecta con las demandas desatendidas de las comunidades rurales e interpela las estructuras tradicionales de poder provincial.
+            </p>
+
+            <p class="paragraph">
+              No obstante, su viabilidad descansa en resolver dos tensiones fundamentales: superar la contradicción de cuestionar a las élites mientras se ejerció la viceprefectura hasta agosto de 2026, y demostrar disciplina fiscal para costear sus programas sociales sin desatender los más de 2.800 kilómetros de vías rurales que reclaman los agricultores. El electorado imbabureño decidirá si esta propuesta encarna una transformación estructural o un nuevo episodio de promesas ante una realidad fiscal insoslayable.
+            </p>
+          </section>
+
+          <!-- SECCIÓN 10: REFERENCIAS BIBLIOGRÁFICAS EN NORMAS APA 7.ª EDICIÓN -->
+          <section id="referencias" class="reportage-section">
+            <div class="section-tag">Sección 10 • Rigor Metodológico</div>
+            <h2 class="section-heading">10. Referencias bibliográficas (Normas APA 7.ª edición)</h2>
+            <p class="paragraph">
+              El presente reportaje de investigación fue fundamentado en fuentes primarias, estadísticas oficiales del Estado ecuatoriano, documentos de organismos multilaterales y publicaciones académicas indexadas:
+            </p>
+
+            <ul class="apa-references-list">
+              <li class="apa-item">
+                Comisión Económica para América Latina y el Caribe (CEPAL). (2022). <em>La autonomía económica de las mujeres en la recuperación transformadora con igualdad</em> (Serie Asuntos de Género, N.° 161). Naciones Unidas. <a href="https://www.cepal.org/es/publicaciones/47990-la-autonomia-economica-mujeres-la-recuperacion-transformadora-igualdad" target="_blank" rel="noopener noreferrer" class="apa-link">https://www.cepal.org/es/publicaciones/47990</a>
+              </li>
+              <li class="apa-item">
+                Consejo Nacional Electoral del Ecuador (CNE). (2026). <em>Plan de Trabajo de la Alianza Provincial Juntos por la Transformación para la Prefectura y Viceprefectura de Imbabura (Período 2027–2031)</em>. Delegación Provincial Electoral de Imbabura. <a href="https://cne.gob.ec" target="_blank" rel="noopener noreferrer" class="apa-link">https://cne.gob.ec</a>
+              </li>
+              <li class="apa-item">
+                Facultad Latinoamericana de Ciencias Sociales (FLACSO Ecuador). (2021). <em>Plurinacionalidad, autonomías indígenas y gobernanza subnacional en la región andina: Debates territoriales contemporáneos</em> (S. Ospina &amp; M. Santillana, Eds.). FLACSO Sede Ecuador. <a href="https://biblio.flacsoandes.edu.ec" target="_blank" rel="noopener noreferrer" class="apa-link">https://biblio.flacsoandes.edu.ec</a>
+              </li>
+              <li class="apa-item">
+                Gobierno Autónomo Descentralizado Provincial de Imbabura (GADPI). (2024). <em>Plan de Desarrollo y Ordenamiento Territorial de la Provincia de Imbabura (PDOT 2023–2027): Actualización y diagnóstico territorial</em>. Dirección General de Planificación Provincial. <a href="https://www.imbabura.gob.ec" target="_blank" rel="noopener noreferrer" class="apa-link">https://www.imbabura.gob.ec</a>
+              </li>
+              <li class="apa-item">
+                Instituto Nacional de Estadística y Censos (INEC). (2023). <em>Encuesta Nacional sobre Relaciones Familiares y Violencia de Género contra las Mujeres (ENVIGMU) y Encuesta Nacional de Empleo, Desempleo y Subempleo (ENEMDU) - Reporte Provincial Imbabura</em>. Dirección de Estadísticas Sociodemográficas. <a href="https://www.ecuadorencifras.gob.ec" target="_blank" rel="noopener noreferrer" class="apa-link">https://www.ecuadorencifras.gob.ec</a>
+              </li>
+              <li class="apa-item">
+                Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura (UNESCO). (2019). <em>Imbabura Geoparque Mundial de la UNESCO: Consejo Ejecutivo 206 EX/7</em>. Sector de Ciencias Exactas y Naturales. <a href="https://es.unesco.org/global-geoparks/imbabura" target="_blank" rel="noopener noreferrer" class="apa-link">https://es.unesco.org/global-geoparks/imbabura</a>
+              </li>
+            </ul>
+          </section>
+
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- Pie de página editorial y créditos académicos -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-col brand-col">
+        <div class="footer-logo">ÁGORA IMBABURA</div>
+        <p class="footer-description">
+          Plataforma de periodismo digital, análisis electoral y divulgación académica universitaria. Proyecto realizado para el Concurso Académico de Periodismo Territorial 2026.
+        </p>
+        <div class="license-note">
+          Contenido publicado bajo licencia académica de libre distribución <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer">Creative Commons CC BY-NC-SA 4.0</a>.
+        </div>
+      </div>
+
+      <div class="footer-col links-col">
+        <h3 class="footer-heading">Navegación Rápida</h3>
+        <ul class="footer-links">
+          <li><a href="#introduccion">Contexto Provincial</a></li>
+          <li><a href="#antecedentes">Trayectoria de la Candidata</a></li>
+          <li><a href="#eje-politico">Eje Político y Gobernanza</a></li>
+          <li><a href="#eje-social">Eje Social y Género</a></li>
+          <li><a href="#eje-economico">Eje Económico y Productivo</a></li>
+          <li><a href="#matriz-impactos">Matriz de Viabilidad</a></li>
+          <li><a href="#referencias">Referencias en APA 7.ª</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col ethics-col">
+        <h3 class="footer-heading">Compromiso Editorial</h3>
+        <p class="ethics-text">
+          Este reportaje no constituye propaganda política ni adhesión electoral a candidatura alguna. Ha sido elaborado exclusivamente con fines analíticos, pedagógicos y universitarios, contrastando fuentes documentales y respetando la pluralidad del debate democrático.
+        </p>
+        <div class="scroll-top-wrapper">
+          <a href="#top" class="back-to-top-btn" aria-label="Volver al inicio de la página">
+            ↑ Subir al inicio
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container bottom-inner">
+        <p>© 2026 Unidad de Análisis Territorial y Periodismo Académico • Imbabura, Ecuador.</p>
+        <p>Desarrollado en HTML5 semántico, CSS3 moderno y JavaScript vanilla optimizado.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal / Dialog accesible para visualización ampliada de imágenes (Lightbox) -->
+  <dialog id="imageLightbox" class="lightbox-dialog" aria-label="Visor ampliado de fotografía">
+    <div class="lightbox-content">
+      <button type="button" id="closeLightboxBtn" class="lightbox-close-btn" aria-label="Cerrar visor de fotografía">✕</button>
+      <div class="lightbox-image-box">
+        <img id="lightboxImg" src="" alt="Fotografía ampliada" class="lightbox-image">
+      </div>
+      <p id="lightboxCaption" class="lightbox-caption"></p>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
